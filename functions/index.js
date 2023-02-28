@@ -1,6 +1,7 @@
 import functions from "firebase-functions";
 import express from "express";
 import cors from "cors"
+import {getAllLeads} from "./src/api.js"
 
 const app = express();
 app.use (cors());
@@ -9,7 +10,7 @@ app.get("/test", (req,res)=>{
     res.send("The leads api es connected");
 });
 
-app.post("/leads", getAllLeads)
+app.get("/leads", await getAllLeads)
 //app.post ("/leads", addlead)
 //app.get("/leads/:location", getLeadsByLocation)
 

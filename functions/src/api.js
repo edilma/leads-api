@@ -29,7 +29,6 @@ export async function getAllLeads (req,res){
       })
   // send back the list you just got
   res.send(allLeads);
-
 }
 
 //post
