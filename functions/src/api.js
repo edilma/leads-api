@@ -32,12 +32,12 @@ export async function getAllLeads (req,res){
 }
 
 //post
-export async function addlead (item) {
-    await leads.insertOne(item)
-   
+export async function addlead (req,res){
+  const newLead = req.body;
+  await leadsCollection.insertOne(newLead)
+  .catch(err=>{
+    res.status(500).send(err)
+    return
+  });
+  res.status(201).send({message: "A new lead has been added"});
 }
-
-
-
-
-

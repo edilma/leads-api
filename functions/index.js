@@ -1,7 +1,7 @@
 import functions from "firebase-functions";
 import express from "express";
 import cors from "cors"
-import {getAllLeads} from "./src/api.js"
+import {getAllLeads, addlead} from "./src/api.js"
 
 const app = express();
 app.use (cors());
@@ -11,7 +11,7 @@ app.get("/test", (req,res)=>{
 });
 
 app.get("/leads", await getAllLeads)
-//app.post ("/leads", addlead)
+app.post ("/leads", addlead)
 //app.get("/leads/:location", getLeadsByLocation)
 
 
