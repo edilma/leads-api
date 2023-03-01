@@ -5,21 +5,6 @@ import dbConnect from "./utils.js"
 const db = dbConnect();
 const leadsCollection = db.collection("leads")
 
-
-const lead1={
-    id:	1,
-first_name:	"Willey",
-last_name:	"Kigelman",
-email:	"wkigelman0@csmonitor.com",
-zip: "33486",	
-city:	"Stockholm",
-learning_preferred:	"Remote",
-ip_address:	"104.84.132.14",
-time_acquired:	"2/7/23",
-site_collected:	"google.com",
-time:	"7:21 PM"
-}
-
 //get
 export async function getAllLeads (req,res){
      const allLeads= await leadsCollection.find({}).toArray()
@@ -32,7 +17,7 @@ export async function getAllLeads (req,res){
 }
 
 //post
-export async function addlead (req,res){
+export async function addLead (req,res){
   const newLead = req.body;
   await leadsCollection.insertOne(newLead)
   .catch(err=>{
@@ -40,4 +25,16 @@ export async function addlead (req,res){
     return
   });
   res.status(201).send({message: "A new lead has been added"});
+}
+
+//get leads by location
+export async function getLeadsByLocation (req,res){
+  const {learning_preferred} = req.params;
+  const localLeads = await leadsCollection.find({learning_preferred : "Local"}).toArray() 
+  .catch(err=>{
+    res.status(500).send(err);
+    return
+  });
+  res.send(localLeads);
+  
 }
