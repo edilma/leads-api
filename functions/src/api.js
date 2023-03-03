@@ -29,8 +29,12 @@ export async function addLead (req,res){
 
 //get leads by location
 export async function getLeadsByLocation (req,res){
-  const {learning_preferred} = req.params;
-  const localLeads = await leadsCollection.find({learning_preferred : "Local"}).toArray() 
+  const {type} = req.params;
+  console.log(req.params)
+let filter = type!= "undefined" ? {learning_preferred : type} : {}
+console.log(filter)
+
+  const localLeads = await leadsCollection.find(filter).toArray() 
   .catch(err=>{
     res.status(500).send(err);
     return

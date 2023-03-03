@@ -12,7 +12,7 @@ app.get("/test", (req,res)=>{
 
 app.get("/leads", await getAllLeads)
 app.post ("/leads", addLead)
-app.get("/leads/:location", getLeadsByLocation)
+app.get("/leads/:type", getLeadsByLocation)
 
 
 
