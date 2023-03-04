@@ -16,9 +16,4 @@ app.get("/leads/:type", getLeadsByLocation)
 
 
 
-// should i have next 2 api points?
-//app.get ("/leads/local", getLocalLeads)
-//app.get("/leads/remote", getRemoteLeads)
-
-
 export const api= functions.https.onRequest(app)
