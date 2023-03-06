@@ -1,9 +1,5 @@
 
-import dbConnect from "./utils.js"
-
-//This is my connection to the database.  Collection leads
-const db = dbConnect();
-const leadsCollection = db.collection("leads")
+import {leadsCollection} from "./config.js"
 
 //get
 export async function getAllLeads (req,res){
@@ -33,12 +29,12 @@ export async function getLeadsByLocation (req,res){
   console.log(req.params)
 let filter = type!= "undefined" ? {learning_option: type} : {}
 console.log(filter)
-
-  const localLeads = await leadsCollection.find(filter).toArray() 
+//this is sending the leads by location, remote or local
+  const byLocationLeads = await leadsCollection.find(filter).toArray() 
   .catch(err=>{
     res.status(500).send(err);
     return
   });
-  res.send(localLeads);
+  res.send(byLocationLeads);
   
 }
