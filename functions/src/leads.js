@@ -15,12 +15,14 @@ export async function getAllLeads (req,res){
 //post
 export async function addLead (req,res){
   const newLead = req.body;
-  await leadsCollection.insertOne(newLead)
-  .catch(err=>{
+  try {
+    const status =  await leadsCollection.insertOne(newLead)
+    res.status(201).send({message: "A new lead has been added"});
+    
+  } catch (error) {
     res.status(500).send(err)
-    return
-  });
-  res.status(201).send({message: "A new lead has been added"});
+    console.error(error)
+  }
 }
 
 //get leads by location
