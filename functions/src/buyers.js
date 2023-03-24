@@ -21,7 +21,7 @@ export async function addBuyer(req, res) {
       res.status(500).send(err)
       return
     });
-  res.status(201).send({ message: "A new Buyer has been added" });
+  res.status(201).send({ message: "New Buyer has been added" });
 }
 
 //post log in
