@@ -28,6 +28,4 @@ app.post("/login", loginBuyer);
 //the get buyers by location needs to be modify
 app.get("/buyers/:type", getBuyersByRequest);
 
-//the API is hosted in https://lds-leads-er.web.app
-
 export const api = functions.https.onRequest(app);

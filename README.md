@@ -2,13 +2,11 @@
 
 This API is designed to manage leads and buyers, hosted on Google Cloud Platform (GCP) using Firebase Cloud Functions. The database backing this API is MongoDB.
 
-## Base URL
-
-```
-https://lds-leads-er.web.app
-```
+![Lead capture form](https://raw.githubusercontent.com/edilma/leads-api/main/public/lead_collecting_form.png)
 
 ## Endpoints
+
+![Postman API test](https://raw.githubusercontent.com/edilma/leads-api/main/public/postman_lds_screenshots.png)
 
 ### Test Endpoint
 
