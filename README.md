@@ -1,8 +1,12 @@
-# LDS Leads Express API on Firebase Hosting - Cloud Functions GCP
+# Lead Delivery System
+
+## Express API on Firebase Hosting - Cloud Functions GCP
 
 This API is designed to manage leads and buyers, hosted on Google Cloud Platform (GCP) using Firebase Cloud Functions. The database backing this API is MongoDB.
 
 ![Lead capture form](https://raw.githubusercontent.com/edilma/leads-api/main/public/lead_collecting_form.png)
+
+![Buyers List of Leads](https://github.com/edilma/leads-api/blob/main/public/lead_buyer_display.png?raw=true)
 
 ## Endpoints
 
