@@ -4,13 +4,11 @@
 
 This API is designed to manage leads and buyers, hosted on Google Cloud Platform (GCP) using Firebase Cloud Functions. The database backing this API is MongoDB.
 
-![Lead capture form](https://raw.githubusercontent.com/edilma/leads-api/main/public/lead_collecting_form.png)
-
-![Buyers List of Leads](https://github.com/edilma/leads-api/blob/main/public/lead_buyer_display.png?raw=true)
-
 ## Endpoints
 
 ![Postman API test](https://raw.githubusercontent.com/edilma/leads-api/main/public/postman_lds_screenshots.png)
+
+![Postman Local Leads End Point](https://github.com/edilma/leads-api/blob/main/public/postman_lds_local_leads.png?raw=true)
 
 ### Test Endpoint
 
@@ -82,3 +80,19 @@ Instructions on how to deploy this Cloud Function on Firebase will be necessary.
 - When ready run firebase deploy
 
 ---
+
+## Frontend Repository
+
+For a complete view and interaction with our project, please also check out the frontend part of this application. The frontend is built with ReactJS and integrates seamlessly with our backend, providing a rich and interactive user experience.
+
+👉 Visit the frontend repository here: [GitHub - Lead FrontEnd](https://github.com/edilma/lead-frontend)
+
+In the frontend repository, you'll find all the necessary instructions to set up and run the frontend locally on your machine. This includes steps for installation, configuration, and how to connect it with this backend for full functionality.
+
+### Capture leads Form
+
+![Lead capture form](https://raw.githubusercontent.com/edilma/leads-api/main/public/lead_collecting_form.png)
+
+### Buyer leads page
+
+![Buyers List of Leads](https://github.com/edilma/leads-api/blob/main/public/lead_buyer_display.png?raw=true)
